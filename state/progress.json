@@ -1,0 +1,17 @@
+{
+  "started": true,
+  "location": "guest_bedroom",
+  "environment": "",
+  "thing": "",
+  "found_pages": [],
+  "inventory": [],
+  "opened_environments": [],
+  "visited_locations": [
+    "hall",
+    "living_room",
+    "kitchen",
+    "corridor",
+    "guest_bedroom",
+    "guest_gardrobe"
+  ]
+}

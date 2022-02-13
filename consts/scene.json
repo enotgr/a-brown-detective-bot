@@ -1,0 +1,494 @@
+{
+  "locations": [
+    {
+      "id": "at_enter",  
+      "title": "Крыльцо.",
+      "description": "Вы видите дверь в дом. Вокруг тишина.",
+      "first": "",
+      "available_locations": [
+        "hall",
+        "garden"
+      ],
+      "environment": [],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "garden",  
+      "title": "Сад",
+      "description": "Красивый садъ.",
+      "first": "",
+      "available_locations": [
+        "at_enter"
+      ],
+      "environment": [
+        "flower_bed",
+        "oak"
+      ],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "hall",  
+      "title": "Прихожая",
+      "description": "Обычная прихожая.",
+      "first": "",
+      "available_locations": [
+        "at_enter",
+        "living_room",
+        "restroom",
+        "guest_restroom"
+      ],
+      "environment": [
+        "commode",
+        "safe"
+      ],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "guest_restroom",  
+      "title": "Уборная",
+      "description": "Небольшая гостевая ванная комната.",
+      "first": "",
+      "available_locations": [
+        "hall"
+      ],
+      "environment": [
+        "toilet",
+        "shower",
+        "washbasin",
+        "toilet_cabinet"
+      ],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "living_room",  
+      "title": "Гостиная",
+      "description": "Светлая гостевая комната.",
+      "first": "",
+      "available_locations": [
+        "hall",
+        "kitchen",
+        "corridor"
+      ],
+      "environment": [
+        "fireplace",
+        "coffee_table",
+        "bookcase",
+        "sofa"
+      ],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "kitchen",  
+      "title": "Кухня",
+      "description": "Современная кухня-остров.",
+      "first": "",
+      "available_locations": [
+        "living_room",
+        "dining_room"
+      ],
+      "environment": [
+        "refrigerator",
+        "bar_counter",
+        "kitchen_cupboard"
+      ],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "dining_room",  
+      "title": "Столовая",
+      "description": "Просторная столовая.",
+      "first": "",
+      "available_locations": [
+        "kitchen"
+      ],
+      "environment": [
+        "dinner_table",
+        "сouch"
+      ],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "corridor",  
+      "title": "Коридор",
+      "description": "Просто узкий коридор.",
+      "first": "",
+      "available_locations": [
+        "living_room",
+        "guest_bedroom",
+        "corridor_2"
+      ],
+      "environment": [],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "guest_bedroom",  
+      "title": "Спальня",
+      "description": "Гостевая спальная комната.",
+      "first": "",
+      "available_locations": [
+        "corridor",
+        "guest_gardrobe"
+      ],
+      "environment": [],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "guest_gardrobe",  
+      "title": "Гардероб",
+      "description": "Небольшой гостевой гардероб.",
+      "first": "",
+      "available_locations": [
+        "guest_bedroom"
+      ],
+      "environment": [],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "corridor_2",  
+      "title": "Коридор",
+      "description": "Длинный коридор второго этажа.",
+      "first": "",
+      "available_locations": [
+        "corridor",
+        "bedroom",
+        "workroom",
+        "music_room"
+      ],
+      "environment": [],
+      "is_closed": false,
+      "keys": []
+    }
+  ],
+  "environments": [
+    {
+      "id": "commode",
+      "title": "Комод",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "safe",
+      "title": "Сейф",
+      "is_closed": true,
+      "password": "1207",
+      "hint": "Необходимо ввести четырёхзначный пароль:\n<b>****</b>",
+      "opened": "Алиса услышала едва заметный щелчок.\n<b>Сейф открыт!</b>\n\n/safe - Открыть дверцу сейфа",
+      "things": [
+        "socks"
+      ],
+      "pages": [
+        "page_1"
+      ],
+      "first": ""
+    },
+    {
+      "id": "flower_bed",
+      "title": "Цветочная клумба",
+      "is_closed": false,
+      "password": "",
+      "things": [
+        "red_flower",
+        "leyka"
+      ],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "oak",
+      "title": "Взрослое дубовое дерево",
+      "is_closed": false,
+      "password": "",
+      "things": [
+        "acorn"
+      ],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "fireplace",
+      "title": "Камин",
+      "is_closed": false,
+      "password": "",
+      "things": [
+        "firewood"
+      ],
+      "pages": [
+        "page_2"
+      ],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "coffee_table",
+      "title": "Журнальный столик",
+      "is_closed": false,
+      "password": "",
+      "things": [
+        "magazine",
+        "book_1"
+      ],
+      "pages": [
+        "page_3",
+        "page_4"
+      ],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "bookcase",
+      "title": "Книжный шкаф",
+      "is_closed": false,
+      "password": "",
+      "things": [
+        "book_2",
+        "book_3",
+        "book_4",
+        "board_game"
+      ],
+      "pages": [
+        "page_5"
+      ],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "toilet",
+      "title": "Одноместный унитаз",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "shower",
+      "title": "Душевая кабина",
+      "is_closed": false,
+      "password": "",
+      "things": [
+        "shampoo"
+      ],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "washbasin",
+      "title": "Умывальник",
+      "is_closed": false,
+      "password": "",
+      "things": [
+        "soap"
+      ],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "toilet_cabinet",
+      "title": "Туалетный шкафчик",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "refrigerator",
+      "title": "Холодильник",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "bar_counter",
+      "title": "Барная стойка",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "kitchen_cupboard",
+      "title": "Кухонный шкафчик",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    }
+  ],
+  "things": [
+    {
+      "id": "socks",
+      "title": "Носки",
+      "description": "Обычные носки."
+    },
+    {
+      "id": "cover",
+      "title": "Ковер",
+      "description": "Необычный ковер."
+    },
+    {
+      "id": "leyka",
+      "title": "Лейка",
+      "description": "Воду льёт."
+    },
+    {
+      "id": "red_flower",
+      "title": "Цветок",
+      "description": "Красивый алый цветок."
+    },
+    {
+      "id": "acorn",
+      "title": "Жёлудь",
+      "description": "Из этого может вырасти дерево."
+    },
+    {
+      "id": "firewood",
+      "title": "Дрова",
+      "description": "Дрова для растопки камина из соснового дерева."
+    },
+    {
+      "id": "magazine",
+      "title": "Журнал",
+      "description": "Как построить дом своими руками."
+    },
+    {
+      "id": "book_1",
+      "title": "Книга",
+      "description": "Эльчин Сафарли. <i>'Мне тебя обещали'.</i>"
+    },
+    {
+      "id": "book_2",
+      "title": "Книга",
+      "description": "Сиддхартха Рао. <i>'С++ за 21 день'.</i>"
+    },
+    {
+      "id": "book_3",
+      "title": "Книга",
+      "description": "Герман Мелвилл. <i>'Моби Дик, или Белый кит'.</i>"
+    },
+    {
+      "id": "book_4",
+      "title": "Книга",
+      "description": "Вирджиния Вулф. <i>'На маяк'.</i>"
+    },
+    {
+      "id": "board_game",
+      "title": "Бэнг!",
+      "description": "Настольная игра."
+    }
+  ],
+  "pages": [
+    {
+      "id": "page_1",
+      "title": "Страница 1",
+      "date": "27 Февраля",
+      "coord": "2"
+    },
+    {
+      "id": "page_2",
+      "title": "Страница 2",
+      "date": "1 Марта",
+      "coord": "3"
+    },
+    {
+      "id": "page_3",
+      "title": "Страница 3",
+      "date": "7 Марта",
+      "coord": "4"
+    },
+    {
+      "id": "page_4",
+      "title": "Страница 4",
+      "date": "12 Марта",
+      "coord": "5"
+    },
+    {
+      "id": "page_5",
+      "title": "Страница 5",
+      "date": "4 Апреля",
+      "coord": "6"
+    },
+    {
+      "id": "page_6",
+      "title": "Страница 6",
+      "date": "7 Апреля",
+      "coord": "7"
+    },
+    {
+      "id": "page_7",
+      "title": "Страница 7",
+      "date": "8 Апреля",
+      "coord": "8"
+    },
+    {
+      "id": "page_8",
+      "title": "Страница 8",
+      "date": "5 Мая",
+      "coord": "9"
+    },
+    {
+      "id": "page_9",
+      "title": "Страница 9",
+      "date": "7 Июля",
+      "coord": "1"
+    },
+    {
+      "id": "page_10",
+      "title": "Страница 10",
+      "date": "15 Августа",
+      "coord": "2"
+    },
+    {
+      "id": "page_11",
+      "title": "Страница 11",
+      "date": "19 Сентября",
+      "coord": "52.023402 113.510225"
+    },
+    {
+      "id": "page_12",
+      "title": "Страница 12",
+      "date": "12 Октября",
+      "coord": "4"
+    }
+  ]
+}
