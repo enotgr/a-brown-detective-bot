@@ -1,5 +1,3 @@
-from gc import isenabled
-from opcode import haslocal
 from misc import bot
 from classes.file_service import fileService
 from utils.handler_utils import send, has_access
@@ -23,25 +21,94 @@ scene_locations = [
   'restroom',
   'gardrobe',
   'attic',
+  'empty_room'
 ]
 
 scene_environments = [
   'safe',
-  'commode',
+  'closet',
   'flower_bed',
   'oak',
   'fireplace',
   'coffee_table',
   'bookcase',
-  'toilet',
-  'shower',
-  'washbasin',
-  'toilet_cabinet',
+  'guest_toilet',
+  'guest_shower',
+  'guest_washbasin',
+  'guest_toilet_cabinet',
   'refrigerator',
   'bar_counter',
   'kitchen_cupboard',
   'dinner_table',
   'сouch',
+  'commode',
+  'footwear_stand',
+  'floor_lamp',
+  'sofa',
+  'carpet',
+  'rocking_chair',
+  'bake',
+  'guest_bed',
+  'guest_nightstand',
+  'guest_desktop',
+  'guest_commode',
+  'guest_mirror',
+  'bed',
+  'nightstand',
+  'desktop',
+  'chair',
+  'bath',
+  'toilet',
+  'shower',
+  'toilet_cabinet',
+  'washbasin',
+  'mirror',
+  'desktop_2',
+  'bookcase_2',
+  'office_chair',
+  'wall_shelf',
+  'sofa_2',
+  'rocking_chair_2',
+  'rack',
+  'easel',
+  'desktop_3',
+  'bath_2',
+  'guitar_wall',
+  'drums',
+  'desktop_4',
+  'stand',
+  'box_1',
+  'box_2',
+  'box_3',
+  'box_4',
+  'box_5',
+  'box_6',
+  'box_7',
+  'easel_2',
+  'rack_2',
+]
+
+scene_things = [
+  'socks',
+  'cover',
+  'leyka',
+  'red_flower',
+  'acorn',
+  'firewood',
+  'magazine',
+  'book_1',
+  'book_2',
+  'book_3',
+  'book_4',
+  'board_game',
+  'key',
+  'jeans',
+  'warm_socks',
+  'green_t_short',
+  'sweater',
+  'suit',
+  'shirt',
+  'underpants',
 ]
 
 @bot.message_handler(commands=['start'])
@@ -440,7 +507,7 @@ def exploreEnv(message):
 
   send(message, '<i><b>{0}</b></i>.{1}\n/lookaround - Назад'.format(targetEnv['title'], thingsText))
 
-@bot.message_handler(commands=['socks', 'cover', 'leyka', 'red_flower', 'acorn', 'firewood', 'magazine', 'book_1', 'book_2', 'book_3', 'book_4', 'board_game', 'key'])
+@bot.message_handler(commands=scene_things)
 def exploreThing(message):
   if not has_access(message.chat.id):
     return

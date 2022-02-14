@@ -1,7 +1,7 @@
 {
   "locations": [
     {
-      "id": "at_enter",  
+      "id": "at_enter",
       "title": "Крыльцо",
       "description": "Вы видите дверь в дом. Вокруг тишина.",
       "first": "",
@@ -14,7 +14,7 @@
       "keys": []
     },
     {
-      "id": "garden",  
+      "id": "garden",
       "title": "Сад",
       "description": "Красивый садъ.",
       "first": "",
@@ -29,7 +29,7 @@
       "keys": []
     },
     {
-      "id": "hall",  
+      "id": "hall",
       "title": "Прихожая",
       "description": "Обычная прихожая.",
       "first": "",
@@ -39,8 +39,8 @@
         "guest_restroom"
       ],
       "environment": [
-        "commode",
-        "safe"
+        "closet",
+        "footwear_stand"
       ],
       "is_closed": false,
       "keys": []
@@ -54,16 +54,16 @@
         "hall"
       ],
       "environment": [
-        "toilet",
-        "shower",
-        "washbasin",
-        "toilet_cabinet"
+        "guest_toilet",
+        "guest_shower",
+        "guest_washbasin",
+        "guest_toilet_cabinet"
       ],
       "is_closed": false,
       "keys": []
     },
     {
-      "id": "living_room",  
+      "id": "living_room",
       "title": "Гостиная",
       "description": "Светлая гостевая комната.",
       "first": "",
@@ -76,13 +76,16 @@
         "fireplace",
         "coffee_table",
         "bookcase",
-        "sofa"
+        "floor_lamp",
+        "sofa",
+        "carpet",
+        "rocking_chair"
       ],
       "is_closed": false,
       "keys": []
     },
     {
-      "id": "kitchen",  
+      "id": "kitchen",
       "title": "Кухня",
       "description": "Современная кухня-остров.",
       "first": "",
@@ -93,13 +96,14 @@
       "environment": [
         "refrigerator",
         "bar_counter",
-        "kitchen_cupboard"
+        "kitchen_cupboard",
+        "bake"
       ],
       "is_closed": false,
       "keys": []
     },
     {
-      "id": "dining_room",  
+      "id": "dining_room",
       "title": "Столовая",
       "description": "Просторная столовая.",
       "first": "",
@@ -114,9 +118,9 @@
       "keys": []
     },
     {
-      "id": "corridor",  
+      "id": "corridor",
       "title": "Коридор",
-      "description": "Просто узкий коридор.",
+      "description": "Обычный узкий коридор.",
       "first": "",
       "available_locations": [
         "living_room",
@@ -128,7 +132,7 @@
       "keys": []
     },
     {
-      "id": "guest_bedroom",  
+      "id": "guest_bedroom",
       "title": "Спальня",
       "description": "Гостевая спальная комната.",
       "first": "",
@@ -136,24 +140,31 @@
         "corridor",
         "guest_gardrobe"
       ],
-      "environment": [],
+      "environment": [
+        "guest_bed",
+        "guest_nightstand",
+        "guest_desktop"
+      ],
       "is_closed": false,
       "keys": []
     },
     {
-      "id": "guest_gardrobe",  
+      "id": "guest_gardrobe",
       "title": "Гардероб",
       "description": "Небольшой гостевой гардероб.",
       "first": "",
       "available_locations": [
         "guest_bedroom"
       ],
-      "environment": [],
+      "environment": [
+        "guest_commode",
+        "guest_mirror"
+      ],
       "is_closed": false,
       "keys": []
     },
     {
-      "id": "corridor_2",  
+      "id": "corridor_2",
       "title": "Коридор",
       "description": "Длинный коридор второго этажа.",
       "first": "",
@@ -163,14 +174,15 @@
         "study_room",
         "workroom",
         "music_room",
-        "attic"
+        "attic",
+        "empty_room"
       ],
       "environment": [],
       "is_closed": false,
       "keys": []
     },
     {
-      "id": "bedroom",  
+      "id": "bedroom",
       "title": "Спальня",
       "description": "Основная спальная комната.",
       "first": "",
@@ -179,55 +191,82 @@
         "gardrobe",
         "corridor_2"
       ],
-      "environment": [],
+      "environment": [
+        "bed",
+        "nightstand",
+        "desktop",
+        "safe",
+        "chair"
+      ],
       "is_closed": false,
       "keys": []
     },
     {
-      "id": "restroom",  
+      "id": "restroom",
       "title": "Ванная комната",
       "description": "Большая ванная комната.",
       "first": "",
       "available_locations": [
         "bedroom"
       ],
-      "environment": [],
+      "environment": [
+        "bath",
+        "toilet",
+        "shower",
+        "toilet_cabinet",
+        "washbasin"
+      ],
       "is_closed": false,
       "keys": []
     },
     {
-      "id": "gardrobe",  
+      "id": "gardrobe",
       "title": "Гардероб",
       "description": "Просторный гардероб.",
       "first": "",
       "available_locations": [
         "bedroom"
       ],
-      "environment": [],
+      "environment": [
+        "commode",
+        "mirror"
+      ],
       "is_closed": false,
       "keys": []
     },
     {
-      "id": "study_room",  
+      "id": "study_room",
       "title": "Рабочий кабинет",
       "description": "Уютный рабочий кабинет.",
       "first": "",
       "available_locations": [
         "corridor_2"
       ],
-      "environment": [],
+      "environment": [
+        "desktop_2",
+        "bookcase_2",
+        "office_chair",
+        "wall_shelf",
+        "sofa_2",
+        "rocking_chair_2"
+      ],
       "is_closed": false,
       "keys": []
     },
     {
-      "id": "workroom",  
+      "id": "workroom",
       "title": "Мастерская",
       "description": "Творческая мастерская.",
       "first": "",
       "available_locations": [
         "corridor_2"
       ],
-      "environment": [],
+      "environment": [
+        "rack",
+        "easel",
+        "desktop_3",
+        "bath_2"
+      ],
       "is_closed": false,
       "keys": []
     },
@@ -239,8 +278,24 @@
       "available_locations": [
         "corridor_2"
       ],
-      "environment": [],
+      "environment": [
+        "guitar_wall",
+        "drums",
+        "desktop_4",
+        "stand"
+      ],
       "is_closed": false,
+      "keys": []
+    },{
+      "id": "empty_room",  
+      "title": "Пустая комната",
+      "description": "Пустая комната с незаконченным ремонтом.",
+      "first": "",
+      "available_locations": [
+        "corridor_2"
+      ],
+      "environment": [],
+      "is_closed": true,
       "keys": []
     },
     {
@@ -251,7 +306,17 @@
       "available_locations": [
         "corridor_2"
       ],
-      "environment": [],
+      "environment": [
+        "box_1",
+        "box_2",
+        "box_3",
+        "box_4",
+        "box_5",
+        "box_6",
+        "box_7",
+        "easel_2",
+        "rack_2"
+      ],
       "is_closed": true,
       "keys": [
         "key"
@@ -264,7 +329,15 @@
       "title": "Комод",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "jeans",
+        "warm_socks",
+        "green_t_short",
+        "sweater",
+        "suit",
+        "shirt",
+        "underpants"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -364,7 +437,7 @@
       "first": ""
     },
     {
-      "id": "toilet",
+      "id": "guest_toilet",
       "title": "Одноместный унитаз",
       "is_closed": false,
       "password": "",
@@ -375,7 +448,7 @@
       "first": ""
     },
     {
-      "id": "shower",
+      "id": "guest_shower",
       "title": "Душевая кабина",
       "is_closed": false,
       "password": "",
@@ -388,7 +461,7 @@
       "first": ""
     },
     {
-      "id": "washbasin",
+      "id": "guest_washbasin",
       "title": "Умывальник",
       "is_closed": false,
       "password": "",
@@ -401,7 +474,7 @@
       "first": ""
     },
     {
-      "id": "toilet_cabinet",
+      "id": "guest_toilet_cabinet",
       "title": "Туалетный шкафчик",
       "is_closed": false,
       "password": "",
@@ -436,6 +509,501 @@
     {
       "id": "kitchen_cupboard",
       "title": "Кухонный шкафчик",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "footwear_stand",
+      "title": "Тумба для обуви",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "floor_lamp",
+      "title": "Торшер",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "sofa",
+      "title": "Большой мягкий диван",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "carpet",
+      "title": "Красивый ковёр с длинным ворсом",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "rocking_chair",
+      "title": "Кресло-качалка",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "bake",
+      "title": "Электрическая печь",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "сouch",
+      "title": "Удобная небольшая кушетка",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "guest_bed",
+      "title": "Большая гостевая кровать",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "guest_nightstand",
+      "title": "Прикроватная тумба",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "guest_desktop",
+      "title": "Письменный стол",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "guest_commode",
+      "title": "Комод",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "guest_mirror",
+      "title": "Высокое зеркало",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "bed",
+      "title": "Большая двуспальная кровать",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "nightstand",
+      "title": "Прикроватная тумба",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "desktop",
+      "title": "Письменный стол",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "chair",
+      "title": "Обычное кресло",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "bath",
+      "title": "Ванна",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "toilet",
+      "title": "Обычный одноместный унитаз",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "shower",
+      "title": "Вместительная душевая кабина",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "toilet_cabinet",
+      "title": "Туалетный шкафчик",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "washbasin",
+      "title": "Умывальник",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "mirror",
+      "title": "Большое зеркало в деревянной резной раме",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "desktop_2",
+      "title": "Большой письменный стол",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "bookcase_2",
+      "title": "Большой книжный шкаф на всю стену",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "office_chair",
+      "title": "Удобное рабочее кресло",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "wall_shelf",
+      "title": "Настенная полка",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "sofa_2",
+      "title": "Комфортный диван для одного",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "rocking_chair_2",
+      "title": "Плетёное кресло-качалка",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "rack",
+      "title": "Стеллаж",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "easel",
+      "title": "Мольберт",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "desktop_3",
+      "title": "Письменный стол",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "bath_2",
+      "title": "Небольшая ванна для глины",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "guitar_wall",
+      "title": "Стена с гитарами",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "drums",
+      "title": "Акустическая ударная установка",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "desktop_4",
+      "title": "Письменный стол",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "stand",
+      "title": "Высокая тумба",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "box_1",
+      "title": "Коробка с вещами",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "box_2",
+      "title": "Коробка с вещами",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "box_3",
+      "title": "Коробка с вещами",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "box_4",
+      "title": "Коробка с вещами",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "box_5",
+      "title": "Коробка с вещами",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "box_6",
+      "title": "Коробка с вещами",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "box_7",
+      "title": "Коробка с вещами",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "easel_2",
+      "title": "Мольберт",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "rack_2",
+      "title": "Стеллаж",
       "is_closed": false,
       "password": "",
       "things": [],
@@ -510,6 +1078,41 @@
       "id": "key",
       "title": "Ключ",
       "description": "Старый ключ."
+    },
+    {
+      "id": "jeans",
+      "title": "Джинсы",
+      "description": "Обычные старые джинсы."
+    },
+    {
+      "id": "warm_socks",
+      "title": "Носки",
+      "description": "Тёплые шерстяные носки."
+    },
+    {
+      "id": "green_t_short",
+      "title": "Футболка",
+      "description": "Зелёная футболка с надписью 'Nirvana'."
+    },
+    {
+      "id": "sweater",
+      "title": "Свитер",
+      "description": "Изношенный рваный свитер."
+    },
+    {
+      "id": "suit",
+      "title": "Костюм",
+      "description": "Опрятный мужской деловой костюм."
+    },
+    {
+      "id": "shirt",
+      "title": "Рубашка",
+      "description": "Белая рубашка."
+    },
+    {
+      "id": "underpants",
+      "title": "Трусы",
+      "description": "Совершенно обычные трусы."
     }
   ],
   "pages": [
