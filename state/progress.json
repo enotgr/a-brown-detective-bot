@@ -1,17 +1,20 @@
 {
   "started": true,
-  "location": "guest_bedroom",
-  "environment": "",
+  "location": "hall",
+  "environment": "safe",
   "thing": "",
   "found_pages": [],
-  "inventory": [],
-  "opened_environments": [],
+  "inventory": [
+    "key"
+  ],
+  "opened_environments": [
+    "safe"
+  ],
   "visited_locations": [
     "hall",
     "living_room",
-    "kitchen",
     "corridor",
-    "guest_bedroom",
-    "guest_gardrobe"
+    "corridor_2",
+    "attic"
   ]
 }

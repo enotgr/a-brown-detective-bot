@@ -2,7 +2,7 @@
   "locations": [
     {
       "id": "at_enter",  
-      "title": "Крыльцо.",
+      "title": "Крыльцо",
       "description": "Вы видите дверь в дом. Вокруг тишина.",
       "first": "",
       "available_locations": [
@@ -36,7 +36,6 @@
       "available_locations": [
         "at_enter",
         "living_room",
-        "restroom",
         "guest_restroom"
       ],
       "environment": [
@@ -161,12 +160,102 @@
       "available_locations": [
         "corridor",
         "bedroom",
+        "study_room",
         "workroom",
-        "music_room"
+        "music_room",
+        "attic"
       ],
       "environment": [],
       "is_closed": false,
       "keys": []
+    },
+    {
+      "id": "bedroom",  
+      "title": "Спальня",
+      "description": "Основная спальная комната.",
+      "first": "",
+      "available_locations": [
+        "restroom",
+        "gardrobe",
+        "corridor_2"
+      ],
+      "environment": [],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "restroom",  
+      "title": "Ванная комната",
+      "description": "Большая ванная комната.",
+      "first": "",
+      "available_locations": [
+        "bedroom"
+      ],
+      "environment": [],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "gardrobe",  
+      "title": "Гардероб",
+      "description": "Просторный гардероб.",
+      "first": "",
+      "available_locations": [
+        "bedroom"
+      ],
+      "environment": [],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "study_room",  
+      "title": "Рабочий кабинет",
+      "description": "Уютный рабочий кабинет.",
+      "first": "",
+      "available_locations": [
+        "corridor_2"
+      ],
+      "environment": [],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "workroom",  
+      "title": "Мастерская",
+      "description": "Творческая мастерская.",
+      "first": "",
+      "available_locations": [
+        "corridor_2"
+      ],
+      "environment": [],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "music_room",  
+      "title": "Музыкальная комната",
+      "description": "Комната со звукоизоляцией и музыкальными инструментами.",
+      "first": "",
+      "available_locations": [
+        "corridor_2"
+      ],
+      "environment": [],
+      "is_closed": false,
+      "keys": []
+    },
+    {
+      "id": "attic",  
+      "title": "Чердак",
+      "description": "Загадачный чердак.",
+      "first": "",
+      "available_locations": [
+        "corridor_2"
+      ],
+      "environment": [],
+      "is_closed": true,
+      "keys": [
+        "key"
+      ]
     }
   ],
   "environments": [
@@ -189,7 +278,8 @@
       "hint": "Необходимо ввести четырёхзначный пароль:\n<b>****</b>",
       "opened": "Алиса услышала едва заметный щелчок.\n<b>Сейф открыт!</b>\n\n/safe - Открыть дверцу сейфа",
       "things": [
-        "socks"
+        "socks",
+        "key"
       ],
       "pages": [
         "page_1"
@@ -415,6 +505,11 @@
       "id": "board_game",
       "title": "Бэнг!",
       "description": "Настольная игра."
+    },
+    {
+      "id": "key",
+      "title": "Ключ",
+      "description": "Старый ключ."
     }
   ],
   "pages": [

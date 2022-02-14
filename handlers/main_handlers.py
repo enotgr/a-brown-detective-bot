@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from gc import isenabled
 from opcode import haslocal
 from misc import bot
@@ -16,9 +15,14 @@ scene_locations = [
   'corridor',
   'guest_bedroom',
   'guest_gardrobe',
+  'corridor_2',
   'bedroom',
+  'study_room',
   'workroom',
   'music_room',
+  'restroom',
+  'gardrobe',
+  'attic',
 ]
 
 scene_environments = [
@@ -123,7 +127,7 @@ def location(message):
       return
 
     envs = scene["environments"]
-    currentEnv = NULL
+    currentEnv = None
     isEnvFound = False
     
     for env in envs:
@@ -146,7 +150,7 @@ def location(message):
   isLocationFound = False
   locations = scene["locations"]
   locationIds = []
-  currentLocation = NULL
+  currentLocation = None
   
   for loc in locations:
     id = loc["id"]    
@@ -201,7 +205,7 @@ def goto(message):
       return
     
     envs = scene["environments"]
-    currentEnv = NULL
+    currentEnv = None
     isEnvFound = False
     
     for env in envs:
@@ -222,7 +226,7 @@ def goto(message):
 
   currentLocationId = progress['location']
   locations = scene["locations"]
-  currentLocation = NULL
+  currentLocation = None
   hasLocation = False
 
   for loc in locations:
@@ -272,7 +276,7 @@ def lookaround(message):
   text = '<i><b>Вокруг Алиса видит:</b></i>\n'
   isLocationFound = False
   locationIds = []
-  currentLocation = NULL
+  currentLocation = None
 
   locations = scene["locations"]
   for loc in locations:
@@ -292,7 +296,7 @@ def lookaround(message):
 
   envIds = currentLocation["environment"]    
   envs = scene["environments"]
-  currentEnv = NULL
+  currentEnv = None
   isEnvFound = False
     
   for env in envs:
@@ -339,7 +343,7 @@ def exploreEnv(message):
 
   isLocationFound = False
   locationIds = []
-  currentLocation = NULL
+  currentLocation = None
 
   locations = scene["locations"]
   for loc in locations:
@@ -362,7 +366,7 @@ def exploreEnv(message):
     return
 
   envs = scene['environments']
-  targetEnv = NULL
+  targetEnv = None
   hasEnv = False
 
   for env in envs:
@@ -436,7 +440,7 @@ def exploreEnv(message):
 
   send(message, '<i><b>{0}</b></i>.{1}\n/lookaround - Назад'.format(targetEnv['title'], thingsText))
 
-@bot.message_handler(commands=['socks', 'cover', 'leyka', 'red_flower', 'acorn', 'firewood', 'magazine', 'book_1', 'book_2', 'book_3', 'book_4', 'board_game'])
+@bot.message_handler(commands=['socks', 'cover', 'leyka', 'red_flower', 'acorn', 'firewood', 'magazine', 'book_1', 'book_2', 'book_3', 'book_4', 'board_game', 'key'])
 def exploreThing(message):
   if not has_access(message.chat.id):
     return
@@ -479,7 +483,7 @@ def exploreThing(message):
   
   isEnvFound = False
   envIds = []
-  currentEnv = NULL
+  currentEnv = None
   
   envs = scene["environments"]
   for env in envs:
@@ -499,7 +503,7 @@ def exploreThing(message):
   
   currentEnvThings = currentEnv["things"]
   hasThing = False
-  targetThing = NULL
+  targetThing = None
   
   for thing in things:
     id = thing["id"]
@@ -560,7 +564,7 @@ def takePage(message):
   scene = fileService.getJsonObjByPath('consts/scene.json')
   foundPageIds = progress['found_pages']
   scenePages = scene['pages']
-  scenePage = NULL
+  scenePage = None
   
   for page in scenePages:
     if page['id'] == targetPageId:

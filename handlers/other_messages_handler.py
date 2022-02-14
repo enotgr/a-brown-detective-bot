@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from misc import bot
 from classes.file_service import fileService
 from utils.handler_utils import send, has_access
@@ -16,7 +15,7 @@ def otherMessagesHandler(message):
     return
   
   environments = scene['environments']
-  currEnv = NULL
+  currEnv = None
   
   for env in environments:
     if env['id'] == currEnvId:

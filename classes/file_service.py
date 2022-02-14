@@ -1,10 +1,8 @@
-from asyncio.windows_events import NULL
-from consts import world
 import json
 
 class FileService:
   def getJsonObjByPath(self, path):
-    jsonFile = NULL
+    jsonFile = None
     
     try:
       file = open(path, 'r', encoding='utf-8')
