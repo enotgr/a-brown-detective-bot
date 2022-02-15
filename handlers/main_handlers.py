@@ -1,115 +1,7 @@
 from misc import bot
 from classes.file_service import fileService
 from utils.handler_utils import send, has_access
-
-scene_locations = [
-  'hall',
-  'at_enter',
-  'garden',
-  'living_room',
-  'guest_restroom',
-  'kitchen',
-  'dining_room',
-  'corridor',
-  'guest_bedroom',
-  'guest_gardrobe',
-  'corridor_2',
-  'bedroom',
-  'study_room',
-  'workroom',
-  'music_room',
-  'restroom',
-  'gardrobe',
-  'attic',
-  'empty_room'
-]
-
-scene_environments = [
-  'safe',
-  'closet',
-  'flower_bed',
-  'oak',
-  'fireplace',
-  'coffee_table',
-  'bookcase',
-  'guest_toilet',
-  'guest_shower',
-  'guest_washbasin',
-  'guest_toilet_cabinet',
-  'refrigerator',
-  'bar_counter',
-  'kitchen_cupboard',
-  'dinner_table',
-  'сouch',
-  'commode',
-  'footwear_stand',
-  'floor_lamp',
-  'sofa',
-  'carpet',
-  'rocking_chair',
-  'bake',
-  'guest_bed',
-  'guest_nightstand',
-  'guest_desktop',
-  'guest_commode',
-  'guest_mirror',
-  'bed',
-  'nightstand',
-  'desktop',
-  'chair',
-  'bath',
-  'toilet',
-  'shower',
-  'toilet_cabinet',
-  'washbasin',
-  'mirror',
-  'desktop_2',
-  'bookcase_2',
-  'office_chair',
-  'wall_shelf',
-  'sofa_2',
-  'rocking_chair_2',
-  'rack',
-  'easel',
-  'desktop_3',
-  'bath_2',
-  'guitar_wall',
-  'drums',
-  'desktop_4',
-  'stand',
-  'box_1',
-  'box_2',
-  'box_3',
-  'box_4',
-  'box_5',
-  'box_6',
-  'box_7',
-  'easel_2',
-  'rack_2',
-]
-
-scene_things = [
-  'socks',
-  'cover',
-  'leyka',
-  'red_flower',
-  'acorn',
-  'firewood',
-  'magazine',
-  'book_1',
-  'book_2',
-  'book_3',
-  'book_4',
-  'board_game',
-  'key',
-  'jeans',
-  'warm_socks',
-  'green_t_short',
-  'sweater',
-  'suit',
-  'shirt',
-  'underpants',
-]
+from consts.scene_commands import scene_locations, scene_environments, scene_things
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -276,7 +168,7 @@ def goto(message):
     isEnvFound = False
     
     for env in envs:
-      id = env["id"]    
+      id = env["id"]
       if id not in currentEnvId:
         continue
      
@@ -292,16 +184,16 @@ def goto(message):
     return
 
   currentLocationId = progress['location']
-  locations = scene["locations"]
+  locations = scene['locations']
   currentLocation = None
   hasLocation = False
 
   for loc in locations:
-    id = loc["id"]
+    id = loc['id']
     if currentLocationId != id:
       continue
 
-    hasLocation = True      
+    hasLocation = True
     currentLocation = loc
     break
 
@@ -309,12 +201,28 @@ def goto(message):
     send(message, 'ERROR: Такой локации нет.\n')
     return
 
-  availableLocationIds = currentLocation["available_locations"]
+  availableLocationIds = currentLocation['available_locations']
   targetLocationId = message.text.replace('/', '')
 
   if targetLocationId not in availableLocationIds and targetLocationId != progress['location']:
     send(message, 'Эта локация недоступна отсюда.\n')
     return
+  
+  inventory = progress['inventory']
+  targetLocation = None
+  
+  for loc in locations:
+    id = loc['id']
+    if targetLocationId == id:
+      targetLocation = loc
+      break
+
+  if targetLocation['is_closed'] == True and len(targetLocation['keys']) > 0:
+    keys = targetLocation['keys']
+    for key in keys:
+      if key not in inventory:
+        send(message, '<i>Для доступа в эту локацию нужно найти:</i>\n<b>{0}</b>\n\n/inventory - Инвентарь\n/location - Назад'.format(key))
+        return
 
   progress['location'] = targetLocationId
   visitedLocations = progress['visited_locations']
@@ -367,7 +275,7 @@ def lookaround(message):
   isEnvFound = False
     
   for env in envs:
-    id = env["id"]    
+    id = env["id"]
     if id not in envIds:
       continue
      

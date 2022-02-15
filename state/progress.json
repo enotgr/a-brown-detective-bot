@@ -1,20 +1,16 @@
 {
   "started": true,
-  "location": "hall",
-  "environment": "safe",
+  "location": "living_room",
+  "environment": "",
   "thing": "",
   "found_pages": [],
-  "inventory": [
-    "key"
-  ],
-  "opened_environments": [
-    "safe"
-  ],
+  "inventory": [],
+  "opened_environments": [],
   "visited_locations": [
     "hall",
     "living_room",
     "corridor",
     "corridor_2",
-    "attic"
+    "music_room"
   ]
 }

@@ -518,6 +518,17 @@
       "first": ""
     },
     {
+      "id": "closet",
+      "title": "Шкаф-купе для верхней одежды",
+      "is_closed": false,
+      "password": "",
+      "things": [],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
       "id": "footwear_stand",
       "title": "Тумба для обуви",
       "is_closed": false,
