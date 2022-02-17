@@ -1,16 +1,25 @@
 {
   "started": true,
-  "location": "living_room",
+  "location": "study_room",
   "environment": "",
   "thing": "",
   "found_pages": [],
   "inventory": [],
-  "opened_environments": [],
+  "opened_environments": [
+    "oak"
+  ],
   "visited_locations": [
+    "at_enter",
+    "garden",
     "hall",
     "living_room",
+    "kitchen",
+    "dining_room",
     "corridor",
+    "guest_bedroom",
+    "guest_gardrobe",
     "corridor_2",
-    "music_room"
+    "bedroom",
+    "study_room"
   ]
 }

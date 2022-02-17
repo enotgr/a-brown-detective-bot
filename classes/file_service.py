@@ -9,7 +9,7 @@ class FileService:
       jsonFile = json.load(file)
       file.close()
     except:
-      print("Error: can't open progress file.")
+      print("Error: can't open json file.")
     return jsonFile
 
   def saveJsonFile(self, jsonObj, path):
@@ -19,7 +19,7 @@ class FileService:
       file.close()
       return True
     except:
-      print("Error: can't save progress file.")
+      print("Error: can't save json file.")
       return False
     
   def getTextFileByPath(self, path):
@@ -28,7 +28,7 @@ class FileService:
       file = open(path, 'r', encoding='utf-8')
       text = file.read();
     except:
-      print("Error: can't read file.")
+      print("Error: can't read text file.")
     return text
 
 fileService = FileService()
