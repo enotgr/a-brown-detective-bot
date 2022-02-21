@@ -1,7 +1,7 @@
 import time
 from misc import bot
 from classes.file_service import fileService
-from utils.handler_utils import send, has_access
+from utils.handler_utils import send, has_access, getBack
 from consts.scene_commands import scene_locations, scene_environments, scene_things
 
 @bot.message_handler(commands=['start'])
@@ -106,11 +106,10 @@ def location(message):
   currentThingId = progress['thing']
   if currentEnvId != '':
     if currentThingId == '':
-      send(message, 'Сейчас недоступно.\n/lookaround - Осмотреться')
+      send(message, 'Сейчас недоступно.\n\n/{0} - <i>Назад</i>'.format(getBack()))
       return
 
     envs = scene['environments']
-    currentEnv = None
     isEnvFound = False
 
     for env in envs:
@@ -119,14 +118,13 @@ def location(message):
         continue
 
       isEnvFound = True
-      currentEnv = env
       break
 
     if not isEnvFound:
       send(message, 'ERROR: Ничего нет')
       return
 
-    send(message, 'Сейчас недоступно.\n/{0} - Назад'.format(currentEnv['id']))
+    send(message, 'Сейчас недоступно.\n\n/{0} - <i>Назад</i>'.format(getBack()))
     return
 
   text = ''
@@ -171,7 +169,7 @@ def location(message):
   if isFirst and firstDescription:
     send(message, firstDescription)
 
-  text = '{0}\n\nТекущая локация: <b><i>{1}</i></b>\n\n{2}\n/lookaround - Осмотреться'.format(description, title, availableLocationsText)
+  text = '{0}\n\nТекущая локация: <b><i>{1}</i></b>\n\n{2}\n/lookaround - <i>Осмотреться</i>'.format(description, title, availableLocationsText)
 
   send(message, text)
 
@@ -188,11 +186,10 @@ def goto(message):
 
   if currentEnvId != '':
     if currentThingId == '':
-      send(message, 'Сейчас недоступно.\n/lookaround - Осмотреться')
+      send(message, 'Сейчас недоступно.\n\n/{0} - <i>Назад</i>'.format(getBack()))
       return
 
     envs = scene['environments']
-    currentEnv = None
     isEnvFound = False
 
     for env in envs:
@@ -201,14 +198,13 @@ def goto(message):
         continue
 
       isEnvFound = True
-      currentEnv = env
       break
 
     if not isEnvFound:
       send(message, 'ERROR: Ничего нет')
       return
 
-    send(message, 'Сейчас недоступно.\n/{0} - Назад'.format(currentEnv['id']))
+    send(message, 'Сейчас недоступно.\n\n/{0} - <i>Назад</i>'.format(getBack()))
     return
 
   currentLocationId = progress['location']
@@ -233,7 +229,7 @@ def goto(message):
   targetLocationId = message.text.replace('/', '')
 
   if targetLocationId not in availableLocationIds and targetLocationId != progress['location']:
-    send(message, 'Эта локация недоступна отсюда.\n')
+    send(message, 'Эта локация недоступна отсюда.\n\n/{0} - <i>Назад</i>'.format(getBack()))
     return
 
   inventory = progress['inventory']
@@ -245,12 +241,20 @@ def goto(message):
       targetLocation = loc
       break
 
+  text = ''
   if targetLocation['is_closed'] == True and len(targetLocation['keys']) > 0:
     keys = targetLocation['keys']
     for key in keys:
       if key not in inventory:
-        send(message, '<i>Для доступа в эту локацию нужно найти:</i>\n<b>{0}</b>\n\n/inventory - Инвентарь\n/location - Назад'.format(key))
-        return
+        text += '<i>Для доступа в эту локацию нужно найти:</i>\n'
+        for thing in scene['things']:
+          if thing['id'] == key:
+            text += '/{0} - <i>{1}</i>\n'.format(key, thing['title'])
+            break
+        text += '\n/inventory - <i>Инвентарь</i>\n/location - <i>Назад</i>'
+        send(message, text)
+  if len(text) != 0:
+    return
 
   progress['location'] = targetLocationId
 
@@ -307,15 +311,15 @@ def lookaround(message):
     text += '/{0} - {1}\n'.format(id, env['title'])
 
   if not isEnvFound:
-    send(message, '(Здесь пусто)\n\n/location - Назад')
+    send(message, '(Здесь пусто)\n\n/location - <i>Назад</i>')
     return
 
   currentThingId = progress['thing']
   if currentThingId != '':
-    send(message, 'Сейчас недоступно.\n\n/{0} - Назад'.format(currentEnv['id']))
+    send(message, 'Сейчас недоступно.\n\n/{0} - <i>Назад</i>'.format(getBack()))
     return
 
-  text += '\n/location - Назад'
+  text += '\n/location - <i>Назад</i>'
 
   progress['environment'] = ''
   progress['thing'] = ''
@@ -360,7 +364,7 @@ def exploreEnv(message):
     return
 
   if targetEnvId not in currentLocation['environment']:
-    send(message, 'Этот предмет сейчас недоступен.\n\n/lookaround - Назад')
+    send(message, 'Сейчас недоступно.\n\n/{0} - <i>Назад</i>'.format(getBack()))
     return
 
   envs = scene['environments']
@@ -395,7 +399,7 @@ def exploreEnv(message):
 
   if targetEnv['is_closed'] and targetEnvId not in openedEnvs:
     hint = targetEnv['hint']
-    send(message, '{0}\n\n/lookaround - Назад'.format(hint))
+    send(message, '{0}\n\n/lookaround - <i>Назад</i>'.format(hint))
     return
 
   isFirst = False
@@ -442,7 +446,7 @@ def exploreEnv(message):
   if isFirst and targetEnv['first']:
     send(message, targetEnv['first'])
 
-  send(message, '<i><b>{0}</b></i>.{1}\n/lookaround - Назад'.format(targetEnv['title'], thingsText))
+  send(message, '<i><b>{0}</b></i>.{1}\n/lookaround - <i>Назад</i>'.format(targetEnv['title'], thingsText))
 
 @bot.message_handler(commands=scene_things)
 def exploreThing(message):
@@ -462,7 +466,20 @@ def exploreThing(message):
   inventory = progress['inventory']
   for thing in things:
     if thing['id'] == targetThingId and targetThingId in inventory:
-      send(message, '<i><b>{0}</b></i>: {1}\n\n'.format(thing['title'], thing['description']))
+      # пасхалка
+      if progress['location'] == 'garden':
+        if targetThingId == 'acorn':
+          progress['tree'] = True
+        elif targetThingId == 'leyka' and progress['tree']:
+          send(message, '- Я посадила дерево, - сказала Алиса.')
+          progress['tree'] = False
+          fileService.saveJsonFile(progress, 'state/progress.json')
+          return
+        else:
+          progress['tree'] = False
+        fileService.saveJsonFile(progress, 'state/progress.json')
+      # конец пасхалки
+      send(message, '<i><b>{0}</b></i>: {1}\n\n/{2} - <i>Назад</i>'.format(thing['title'], thing['description'], getBack()))
       return
 
   locations = scene['locations']
@@ -482,7 +499,7 @@ def exploreThing(message):
 
   currentEnvId = progress['environment']
   if currentEnvId == '':
-    send(message, 'Сейчас этот предмет недоступен.\n/location - Назад')
+    send(message, 'Сейчас этот предмет недоступен.\n\n/{0} - <i>Назад</i>'.format(getBack()))
     return
 
   isEnvFound = False
@@ -519,7 +536,7 @@ def exploreThing(message):
     break
 
   if not hasThing:
-    send(message, 'Сейчас этот предмет недоступен.\n/{0} - Назад'.format(currentEnv['id']))
+    send(message, 'Сейчас недоступно.\n\n/{0} - <i>Назад</i>'.format(getBack()))
     return
 
   progress['thing'] = targetThingId
@@ -529,7 +546,7 @@ def exploreThing(message):
     send(message, '- Не могу поднять этот предмет.')
     return
 
-  send(message, '<i><b>{0}</b></i>.\n{1}\n\n/take - Взять\n/{2} - Назад'.format(targetThing['title'], targetThing['description'], currentEnv['id']))
+  send(message, '<i><b>{0}</b></i>.\n{1}\n\n/take - <i>Взять</i>\n/{2} - <i>Назад</i>'.format(targetThing['title'], targetThing['description'], currentEnv['id']))
 
 @bot.message_handler(commands=['take'])
 def takeThing(message):
@@ -540,7 +557,7 @@ def takeThing(message):
   currentThing = progress['thing']
 
   if not currentThing:
-    send(message, '- Мои руки чисты, - подумала Алиса.')
+    send(message, '- Мои руки чисты, - подумала Алиса.\n\n/{0} - <i>Назад</i>'.format(getBack()))
     return
 
   inventory = progress['inventory']
@@ -555,7 +572,7 @@ def takeThing(message):
 
   envObj = progress['environment']
 
-  send(message, '- Возможно, мне это пригодится, - подумала Алиса.\n\n/{0} - Назад'.format(envObj))
+  send(message, '- Возможно, мне это пригодится, - подумала Алиса.\n\n/{0} - <i>Назад</i>'.format(envObj))
 
 @bot.message_handler(commands=['page_1', 'page_2', 'page_3', 'page_4', 'page_5', 'page_6', 'page_7', 'page_8', 'page_9', 'page_10', 'page_11', 'page_12'])
 def takePage(message):
@@ -584,7 +601,7 @@ def takePage(message):
 
   currEnvId = progress['environment']
   if not currEnvId:
-    send(message, 'ERROR: осматриваемый предмет не обнаружен.')
+    send(message, '404: страница не найдена.\n\n{0} - <i>Назад</i>'.format(getBack()))
     return
 
   sceneEnv = scene['environments']
@@ -597,7 +614,9 @@ def takePage(message):
       break;
 
   if targetPageId in envPages:
-    progress['found_pages'].append(targetPageId)
+    foundPages = progress['found_pages']
+    foundPages.append(targetPageId)
+    progress['found_pages'] = foundPages
     isSaved = fileService.saveJsonFile(progress, 'state/progress.json')
     if not isSaved:
       send(message, 'ERROR: не могу взять эту страницу.')
@@ -605,9 +624,14 @@ def takePage(message):
 
     text = '<i>{0}</i>\n<b>{1}</b>\n\n'.format(scenePage['title'], scenePage['date'])
     text += fileService.getTextFileByPath('pages/{0}.txt'.format(targetPageId))
-    text += '\n/{0} - Назад'.format(currEnvId)
+    text += '\n<i>На обратной стороне страницы нарисована цифра: <b>{0}</b>.</i>\n'.format(scenePage['coord'])
+    
+    if len(foundPages) == len(scenePages):
+      text += '\n- Теперь все страницы у меня, я могу узнать координаты, - сказала Алиса.\n/coordinates - <i>Координаты</i>\n'
+
+    text += '\n/pages - <i>Найденные страницы</i>\n/{0} - <i>Назад</i>'.format(currEnvId)
     send(message, text)
     return
 
-  send(message, '404: страница не найдена.')
+  send(message, 'ERROR: осматриваемый предмет не обнаружен.')
   return

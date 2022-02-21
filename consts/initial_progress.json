@@ -6,5 +6,6 @@
   "found_pages": [],
   "inventory": [],
   "opened_environments": [],
-  "visited_locations": []
+  "visited_locations": [],
+  "tree": false
 }
