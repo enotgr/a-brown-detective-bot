@@ -529,7 +529,7 @@ def exploreThing(message):
     send(message, '- Не могу поднять этот предмет.')
     return
 
-  send(message, '<i><b>{0}</b></i>: {1}\n\n/take - Взять\n/{2} - Назад'.format(targetThing['title'], targetThing['description'], currentEnv['id']))
+  send(message, '<i><b>{0}</b></i>.\n{1}\n\n/take - Взять\n/{2} - Назад'.format(targetThing['title'], targetThing['description'], currentEnv['id']))
 
 @bot.message_handler(commands=['take'])
 def takeThing(message):

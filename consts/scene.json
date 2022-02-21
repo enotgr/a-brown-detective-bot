@@ -3,7 +3,7 @@
     {
       "id": "at_enter",
       "title": "Крыльцо",
-      "description": "Алиса видит входную дверь. Вокруг тишина.",
+      "description": "Алиса видит незапертую входную дверь.\nВокруг тишина.",
       "first": "На утро следующего дня детектив Браун отправилась к дому Мэтью.",
       "available_locations": [
         "hall",
@@ -112,7 +112,7 @@
       ],
       "environment": [
         "dinner_table",
-        "сouch"
+        "couch"
       ],
       "is_closed": false,
       "keys": []
@@ -121,7 +121,7 @@
       "id": "corridor",
       "title": "Коридор",
       "description": "Обычный узкий коридор.",
-      "first": "",
+      "first": "Алиса прошла в тёмный коридор.",
       "available_locations": [
         "living_room",
         "guest_bedroom",
@@ -135,7 +135,7 @@
       "id": "guest_bedroom",
       "title": "Спальня",
       "description": "Гостевая спальная комната.",
-      "first": "Ничего необычного и ничего лишнего. Просто спальня. За окном поднялся сильный ветер и пошёл дождь.",
+      "first": "Ничего необычного и ничего лишнего. Просто спальня.\n\nЗа окном поднялся сильный ветер и пошёл дождь.",
       "available_locations": [
         "corridor",
         "guest_gardrobe"
@@ -165,7 +165,7 @@
     },
     {
       "id": "corridor_2",
-      "title": "Коридор",
+      "title": "Коридор. Второй этаж.",
       "description": "Длинный коридор второго этажа.",
       "first": "Поднявшись по винтовой лестнице на второй этаж дома, Алиса услышала сильный грохот бьющегося стекла где-то наверху.\n\n- Хеееей! Есть здесь кто-нибудь? - воскликнула детектив, - Кажется, этот шум доносится откуда-то с чердака, - подумала она.",
       "available_locations": [
@@ -185,7 +185,7 @@
       "id": "bedroom",
       "title": "Спальня",
       "description": "Основная спальная комната.",
-      "first": "- Судя по всему, это спальня Мэтью.",
+      "first": "- Судя по всему, это спальня Мэтью. Весьма уютно.",
       "available_locations": [
         "restroom",
         "gardrobe",
@@ -194,7 +194,7 @@
       "environment": [
         "bed",
         "nightstand",
-        "desktop",
+        "desktop_1",
         "safe",
         "chair"
       ],
@@ -205,7 +205,7 @@
       "id": "restroom",
       "title": "Ванная комната",
       "description": "Большая ванная комната.",
-      "first": "",
+      "first": "Детектив вошла в большую ванную комнату и включила свет.\n - А здесь очень мило и довольно опрятно, - подумала детектив Браун.",
       "available_locations": [
         "bedroom"
       ],
@@ -223,7 +223,7 @@
       "id": "gardrobe",
       "title": "Гардероб",
       "description": "Просторный гардероб.",
-      "first": "",
+      "first": "- Ох уж эти зеркала, - подумала Алиса, увидев зеркало в гардеробной комнате, - Почти как дверь в Нарнию.",
       "available_locations": [
         "bedroom"
       ],
@@ -238,7 +238,7 @@
       "id": "study_room",
       "title": "Рабочий кабинет",
       "description": "Уютный рабочий кабинет.",
-      "first": "",
+      "first": "- Думаю, Мэтью проводил здесь очень много времени за работой.",
       "available_locations": [
         "corridor_2"
       ],
@@ -257,7 +257,7 @@
       "id": "workroom",
       "title": "Мастерская",
       "description": "Творческая мастерская.",
-      "first": "",
+      "first": "- Здесь можно созидать. И всё же... никаких следов, никаких улик.\n\nАлиса слышит стук дождя в окно.",
       "available_locations": [
         "corridor_2"
       ],
@@ -274,7 +274,7 @@
       "id": "music_room",  
       "title": "Музыкальная комната",
       "description": "Комната со звукоизоляцией и музыкальными инструментами.",
-      "first": "",
+      "first": "- Мэтью явно творческий человек, - подумала детектив.",
       "available_locations": [
         "corridor_2"
       ],
@@ -290,7 +290,7 @@
       "id": "empty_room",  
       "title": "Пустая комната",
       "description": "Пустая комната с незаконченным ремонтом.",
-      "first": "",
+      "first": "- Здесь могло бы быть очень уютно.",
       "available_locations": [
         "corridor_2"
       ],
@@ -302,7 +302,7 @@
       "id": "attic",  
       "title": "Чердак",
       "description": "Загадачный чердак.",
-      "first": "",
+      "first": "Алиса поднялась по лестнице выше, вставила ключ в дверной замок и провернула на два оборота.\n<b>Дверь открыта.</b>\n\nДетектив Браун почувствовала повеявший холод из окна.",
       "available_locations": [
         "corridor_2"
       ],
@@ -315,7 +315,8 @@
         "box_6",
         "box_7",
         "easel_2",
-        "rack_2"
+        "rack_2",
+        "branch"
       ],
       "is_closed": true,
       "keys": [
@@ -341,7 +342,7 @@
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Самое время покопаться в чужих вещах."
     },
     {
       "id": "safe",
@@ -355,7 +356,7 @@
         "key"
       ],
       "pages": [
-        "page_1"
+        "page_10"
       ],
       "first": ""
     },
@@ -371,7 +372,7 @@
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Мило."
     },
     {
       "id": "oak",
@@ -379,7 +380,8 @@
       "is_closed": false,
       "password": "",
       "things": [
-        "acorn"
+        "acorn",
+        "leaves"
       ],
       "pages": [],
       "hint": "",
@@ -392,14 +394,15 @@
       "is_closed": false,
       "password": "",
       "things": [
-        "firewood"
+        "firewood",
+        "poker"
       ],
       "pages": [
-        "page_2"
+        "page_9"
       ],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Кажется там что-то есть."
     },
     {
       "id": "coffee_table",
@@ -408,7 +411,7 @@
       "password": "",
       "things": [
         "magazine",
-        "book_1"
+        "cup_1"
       ],
       "pages": [
         "page_3",
@@ -424,10 +427,11 @@
       "is_closed": false,
       "password": "",
       "things": [
+        "book_1",
         "book_2",
         "book_3",
-        "book_4",
-        "board_game"
+        "board_game",
+        "photo_1"
       ],
       "pages": [
         "page_5"
@@ -453,7 +457,8 @@
       "is_closed": false,
       "password": "",
       "things": [
-        "shampoo"
+        "shampoo_1",
+        "shower_gel_1"
       ],
       "pages": [],
       "hint": "",
@@ -466,63 +471,82 @@
       "is_closed": false,
       "password": "",
       "things": [
-        "soap"
+        "soap_1"
       ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "Алиса подошла к умывальнику и тщательно вымыла руки."
     },
     {
       "id": "guest_toilet_cabinet",
-      "title": "Туалетный шкафчик",
+      "title": "Туалетный шкафчик с зеркалом",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "hair_dryer_1"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Выгляжу неплохо. Но выпить бы ещё кружку кофе."
     },
     {
       "id": "refrigerator",
       "title": "Холодильник",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "milk",
+        "eggs",
+        "olives"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Мэтью уже явно давно не было дома. А молоко явно просрочено."
     },
     {
       "id": "bar_counter",
       "title": "Барная стойка",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "fruit_plate",
+        "paper_towels",
+        "coffee_beans",
+        "coffee_grinder"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "Детектив почувствовала неприятный запах испорченных продуктов."
     },
     {
       "id": "kitchen_cupboard",
       "title": "Кухонный шкафчик",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "plate",
+        "cup_2",
+        "cezve"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Если я приготовлю кофе, не будет ли это уже слишком, - подумала Алиса."
     },
     {
       "id": "closet",
       "title": "Шкаф-купе для верхней одежды",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "scarf",
+        "raincoat",
+        "umbrella"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -533,18 +557,22 @@
       "title": "Тумба для обуви",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "winter_boots"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Здесь только зимняя обувь. Скорее всего Мэтью покинул дом сознательно, - подумала детектив Браун."
     },
     {
       "id": "floor_lamp",
       "title": "Торшер",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "bulb"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -555,11 +583,14 @@
       "title": "Большой мягкий диван",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "plaid_1",
+        "pillow_1"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Здесь поместится человек десять, не меньше."
     },
     {
       "id": "carpet",
@@ -570,14 +601,17 @@
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "Совершенно чистый ковёр. Никаких следов."
     },
     {
       "id": "rocking_chair",
       "title": "Кресло-качалка",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "toy",
+        "plaid_2"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -588,6 +622,19 @@
       "title": "Электрическая печь",
       "is_closed": false,
       "password": "",
+      "things": [
+        "baking_sheet"
+      ],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": ""
+    },
+    {
+      "id": "dinner_table",
+      "title": "Обеденный стол",
+      "is_closed": false,
+      "password": "",
       "things": [],
       "pages": [],
       "hint": "",
@@ -595,7 +642,7 @@
       "first": ""
     },
     {
-      "id": "сouch",
+      "id": "couch",
       "title": "Удобная небольшая кушетка",
       "is_closed": false,
       "password": "",
@@ -610,7 +657,11 @@
       "title": "Большая гостевая кровать",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "blanket_1",
+        "pillow_2",
+        "plaid_3"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -632,7 +683,10 @@
       "title": "Письменный стол",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "pen_1",
+        "notebook_1"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -643,7 +697,9 @@
       "title": "Комод",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "linens"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -658,14 +714,18 @@
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Не имею ничего против зеркал, но не во время работы."
     },
     {
       "id": "bed",
       "title": "Большая двуспальная кровать",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "blanket_2",
+        "pillow_3",
+        "plaid_4"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -676,18 +736,23 @@
       "title": "Прикроватная тумба",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "alarm_clock"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
       "first": ""
     },
     {
-      "id": "desktop",
+      "id": "desktop_1",
       "title": "Письменный стол",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "pen_2",
+        "notebook_2"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -709,7 +774,9 @@
       "title": "Ванна",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "candle"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -731,18 +798,25 @@
       "title": "Вместительная душевая кабина",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "shampoo_2",
+        "washcloth"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Душ бы сейчас не помешал."
     },
     {
       "id": "toilet_cabinet",
       "title": "Туалетный шкафчик",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "deodorant",
+        "salty_water",
+        "hair_dryer_2"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -753,7 +827,10 @@
       "title": "Умывальник",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "soap_2",
+        "toothbrush"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -775,7 +852,11 @@
       "title": "Большой письменный стол",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "pen_3",
+        "notebook_3",
+        "photo_3"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -783,10 +864,14 @@
     },
     {
       "id": "bookcase_2",
-      "title": "Большой книжный шкаф на всю стену",
+      "title": "Книжный шкаф",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "book_4",
+        "book_5",
+        "book_6"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -801,14 +886,17 @@
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- За этим креслом можно провести весь день в комфорте, - подумала, Алиса."
     },
     {
       "id": "wall_shelf",
       "title": "Настенная полка",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "photo_4",
+        "cactus"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -819,7 +907,10 @@
       "title": "Комфортный диван для одного",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "plaid_5",
+        "pillow_4"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -841,7 +932,12 @@
       "title": "Стеллаж",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "clay_2",
+        "gouache",
+        "art_paper",
+        "sketch_book"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -852,7 +948,11 @@
       "title": "Мольберт",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "paint_brush",
+        "clean_paper",
+        "paints"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -874,18 +974,25 @@
       "title": "Небольшая ванна для глины",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "clay_1"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Целая ванна глины. Зачем столько?"
     },
     {
       "id": "guitar_wall",
       "title": "Стена с гитарами",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "acoustic_guitar",
+        "bass_guitar",
+        "electric_guitar",
+        "ukulele"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -896,7 +1003,9 @@
       "title": "Акустическая ударная установка",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "drumsticks"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -907,7 +1016,10 @@
       "title": "Письменный стол",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "music_monitors",
+        "midi_keyboard"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -918,7 +1030,9 @@
       "title": "Высокая тумба",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "mixer"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -926,54 +1040,69 @@
     },
     {
       "id": "box_1",
-      "title": "Коробка с вещами",
+      "title": "Пыльная коробка",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "book_7"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Столько пыли... Кажется, эта коробка лежит здесь уже очень давно, - подумала Алиса.\n- Детектив Браун, стряхиваю пыль с ваших коробок с две тысячи... Апчхи! - раздался громкий чих.\n\n- Эта книга кажется мне знакомой..."
     },
     {
       "id": "box_2",
-      "title": "Коробка с вещами",
+      "title": "Пыльная коробка",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "old_jeans",
+        "old_sweater",
+        "old_t_shirt"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "Похоже, это коробка со старой одеждой."
     },
     {
       "id": "box_3",
-      "title": "Коробка с вещами",
+      "title": "Мокрая коробка",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "wooden_toy",
+        "postcard"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Не повезло тебе оказаться рядом с окном, - подумала Алиса и переместила коробку подальше от окна."
     },
     {
       "id": "box_4",
-      "title": "Коробка с вещами",
+      "title": "Коробка",
       "is_closed": false,
       "password": "",
-      "things": [],
-      "pages": [],
+      "things": [
+        "diary"
+      ],
+      "pages": [
+        "page_7"
+      ],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Нет пыли. Судя по всему, эта коробка стоит здесь не так давно, - подумала детектив."
     },
     {
       "id": "box_5",
-      "title": "Коробка с вещами",
+      "title": "Пыльная коробка",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "dream_catcher"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
@@ -981,7 +1110,7 @@
     },
     {
       "id": "box_6",
-      "title": "Коробка с вещами",
+      "title": "Пыльная коробка",
       "is_closed": false,
       "password": "",
       "things": [],
@@ -992,18 +1121,22 @@
     },
     {
       "id": "box_7",
-      "title": "Коробка с вещами",
+      "title": "Коробка",
       "is_closed": false,
       "password": "",
-      "things": [],
-      "pages": [],
+      "things": [
+        "photo_2"
+      ],
+      "pages": [
+        "page_12"
+      ],
       "hint": "",
       "opened": "",
-      "first": ""
+      "first": "- Хм... Ещё одна чистая коробка."
     },
     {
       "id": "easel_2",
-      "title": "Мольберт",
+      "title": "Пыльный мольберт",
       "is_closed": false,
       "password": "",
       "things": [],
@@ -1014,14 +1147,29 @@
     },
     {
       "id": "rack_2",
-      "title": "Стеллаж",
+      "title": "Пыльный стеллаж",
       "is_closed": false,
       "password": "",
-      "things": [],
+      "things": [
+        "old_raincoat"
+      ],
       "pages": [],
       "hint": "",
       "opened": "",
       "first": ""
+    },
+    {
+      "id": "branch",
+      "title": "Ветвь дуба",
+      "is_closed": false,
+      "password": "",
+      "things": [
+        "glass"
+      ],
+      "pages": [],
+      "hint": "",
+      "opened": "",
+      "first": "- Дерево разбило окно, и ветвь дуба оказалась тут. Теперь ясно откуда был шум."
     }
   ],
   "things": [
@@ -1053,7 +1201,7 @@
     {
       "id": "firewood",
       "title": "Дрова",
-      "description": "Дрова для растопки камина из соснового дерева."
+      "description": "Дрова из соснового дерева для растопки камина."
     },
     {
       "id": "magazine",
@@ -1061,22 +1209,22 @@
       "description": "Как построить дом своими руками."
     },
     {
-      "id": "book_1",
+      "id": "book_7",
       "title": "Книга",
       "description": "Эльчин Сафарли. <i>'Мне тебя обещали'.</i>"
     },
     {
-      "id": "book_2",
+      "id": "book_1",
       "title": "Книга",
       "description": "Сиддхартха Рао. <i>'С++ за 21 день'.</i>"
     },
     {
-      "id": "book_3",
+      "id": "book_2",
       "title": "Книга",
       "description": "Герман Мелвилл. <i>'Моби Дик, или Белый кит'.</i>"
     },
     {
-      "id": "book_4",
+      "id": "book_3",
       "title": "Книга",
       "description": "Вирджиния Вулф. <i>'На маяк'.</i>"
     },
@@ -1124,6 +1272,421 @@
       "id": "underpants",
       "title": "Трусы",
       "description": "Совершенно обычные трусы."
+    },
+    {
+      "id": "leaves",
+      "title": "Листья",
+      "description": "Зелёные дубовые листья."
+    },
+    {
+      "id": "poker",
+      "title": "Кочерга",
+      "description": "Кочерга для камина."
+    },
+    {
+      "id": "cup_1",
+      "title": "Кружка",
+      "description": "Грязная кружка из-под кофе."
+    },
+    {
+      "id": "photo_1",
+      "title": "Фотография",
+      "description": "Фотография бруклинского моста в рамке."
+    },
+    {
+      "id": "shampoo_1",
+      "title": "Шампунь",
+      "description": "Шампунь против перхоти."
+    },
+    {
+      "id": "shower_gel_1",
+      "title": "Гель",
+      "description": "Гель для душа."
+    },
+    {
+      "id": "soap_1",
+      "title": "Мыло",
+      "description": "Мыло для рук."
+    },
+    {
+      "id": "hair_dryer_1",
+      "title": "Фен",
+      "description": "Фен для волос."
+    },
+    {
+      "id": "milk",
+      "title": "Молока",
+      "description": "Бутылка прокисшего молока."
+    },
+    {
+      "id": "eggs",
+      "title": "Яйца",
+      "description": "Испортившиеся куриные яйца."
+    },
+    {
+      "id": "olives",
+      "title": "Оливки",
+      "description": "Банка консервированных оливок."
+    },
+    {
+      "id": "fruit_plate",
+      "title": "Фрукты",
+      "description": "Тарелка с испорченными фруктами."
+    },
+    {
+      "id": "paper_towels",
+      "title": "Полотенца",
+      "description": "Белые бумажные полотенца."
+    },
+    {
+      "id": "coffee_beans",
+      "title": "Кофе",
+      "description": "Вскрытая упаковка кофейных зёрен."
+    },
+    {
+      "id": "coffee_grinder",
+      "title": "Кофемолка",
+      "description": "Электрическая кофемолка с остатками молотого кофе."
+    },
+    {
+      "id": "plate",
+      "title": "Тарелка",
+      "description": "Чистая зелёная тарелка."
+    },
+    {
+      "id": "cup_2",
+      "title": "Кружка",
+      "description": "Чистая зелёная кружка."
+    },
+    {
+      "id": "cezve",
+      "title": "Турка",
+      "description": "Турка для кофе."
+    },
+    {
+      "id": "scarf",
+      "title": "Шарф",
+      "description": "Вязаный шарф."
+    },
+    {
+      "id": "raincoat",
+      "title": "Дождевик",
+      "description": "Полупрозрачный жёлтый дождевик."
+    },
+    {
+      "id": "umbrella",
+      "title": "Зонт",
+      "description": "Обычный чёрный зонт."
+    },
+    {
+      "id": "winter_boots",
+      "title": "Ботинки",
+      "description": "Тёплые зимние ботинки."
+    },
+    {
+      "id": "bulb",
+      "title": "Лампочка",
+      "description": "Лампа накаливания."
+    },
+    {
+      "id": "plaid_1",
+      "title": "Плед",
+      "description": "Шерстяной плед."
+    },
+    {
+      "id": "pillow_1",
+      "title": "Подушка",
+      "description": "Декоративная вязаная подушка."
+    },
+    {
+      "id": "toy",
+      "title": "Игрушка",
+      "description": "Плюшевый лев."
+    },
+    {
+      "id": "plaid_2",
+      "title": "Плед",
+      "description": "Вязаный плед."
+    },
+    {
+      "id": "baking_sheet",
+      "title": "Противень",
+      "description": "Противень для запекания."
+    },
+    {
+      "id": "blanket_1",
+      "title": "Одеяло",
+      "description": "Большое тёплое одеяло."
+    },
+    {
+      "id": "pillow_2",
+      "title": "Подушка",
+      "description": "Обычная подушка для сна."
+    },
+    {
+      "id": "plaid_3",
+      "title": "Плед",
+      "description": "Плед-покрывало для кровати."
+    },
+    {
+      "id": "pen_1",
+      "title": "Ручка",
+      "description": "Синяя шариковая ручка."
+    },
+    {
+      "id": "notebook_1",
+      "title": "Блокнот",
+      "description": "Чистый блокнот."
+    },
+    {
+      "id": "linens",
+      "title": "Постельное бельё",
+      "description": "Комплект постельного белья для гостей."
+    },
+    {
+      "id": "blanket_2",
+      "title": "Одеяло",
+      "description": "Большое теплое одеяло."
+    },
+    {
+      "id": "pillow_3",
+      "title": "Подушка",
+      "description": "Комфортная мягкая подушка для сна."
+    },
+    {
+      "id": "plaid_4",
+      "title": "Плед",
+      "description": "Плед-покрывало для кровати."
+    },
+    {
+      "id": "alarm_clock",
+      "title": "Часы",
+      "description": "Часы-будильник."
+    },
+    {
+      "id": "pen_2",
+      "title": "Ручка",
+      "description": "Чёрная ручка."
+    },
+    {
+      "id": "notebook_2",
+      "title": "Блокнот",
+      "description": "Чистый блокнот в клетку."
+    },
+    {
+      "id": "candle",
+      "title": "Свеча",
+      "description": "Ароматическая свеча."
+    },
+    {
+      "id": "shampoo_2",
+      "title": "Шампунь",
+      "description": "Мужской шампунь против перхоти."
+    },
+    {
+      "id": "washcloth",
+      "title": "Мочалка",
+      "description": "Мочалка для тела."
+    },
+    {
+      "id": "deodorant",
+      "title": "Дезодорант",
+      "description": "Дезодорант Old Spice."
+    },
+    {
+      "id": "salty_water",
+      "title": "Солёная вода",
+      "description": "Солёная вода для укладки волос."
+    },
+    {
+      "id": "soap_2",
+      "title": "Мыло",
+      "description": "Жидкое мыло для рук."
+    },
+    {
+      "id": "toothbrush",
+      "title": "Зубная щётка",
+      "description": "Обычная зубная щётка."
+    },
+    {
+      "id": "pen_3",
+      "title": "Ручка",
+      "description": "Синяя шариковая ручка."
+    },
+    {
+      "id": "notebook_3",
+      "title": "Блокнот",
+      "description": "Блокнот с рабочими записями."
+    },
+    {
+      "id": "photo_3",
+      "title": "Фотография в рамке",
+      "description": "Фотография лондонской телефонной будки."
+    },
+    {
+      "id": "book_4",
+      "title": "Книга",
+      "description": "Бхаргава Адитья. <i>'Грокаем алгоритмы'.</i>"
+    },
+    {
+      "id": "book_5",
+      "title": "Книга",
+      "description": "Хавербеке Марейн. <i>'Выразительный JavaScript'.</i>"
+    },
+    {
+      "id": "book_6",
+      "title": "Книга",
+      "description": "Роберт Мартин. <i>'Чистый код'.</i>"
+    },
+    {
+      "id": "photo_4",
+      "title": "Фотография в рамке",
+      "description": "Фотография с изображением маяка на фоне волнующегося океана."
+    },
+    {
+      "id": "cactus",
+      "title": "Растение в горшке",
+      "description": "Красивый колючий кактус."
+    },
+    {
+      "id": "plaid_5",
+      "title": "Плед",
+      "description": "Вязаный плед."
+    },
+    {
+      "id": "pillow_4",
+      "title": "Подушка",
+      "description": "Небольшая мягкая подушка."
+    },
+    {
+      "id": "clay_2",
+      "title": "Коробка",
+      "description": "Коробка с глиной для лепки."
+    },
+    {
+      "id": "gouache",
+      "title": "Гуашь",
+      "description": "Обычная гуашь. 12 цветов."
+    },
+    {
+      "id": "art_paper",
+      "title": "Бумага",
+      "description": "Акварельная бумага."
+    },
+    {
+      "id": "sketch_book",
+      "title": "Скетчбук",
+      "description": "Блокнот для набросков."
+    },
+    {
+      "id": "paint_brush",
+      "title": "Кисть",
+      "description": "Кисть для акварели."
+    },
+    {
+      "id": "clean_paper",
+      "title": "Бумажный лист",
+      "description": "Чистый акварельный лист."
+    },
+    {
+      "id": "paints",
+      "title": "Акварель",
+      "description": "Акварельные краски."
+    },
+    {
+      "id": "clay_1",
+      "title": "Глина",
+      "description": "Глина для лепки."
+    },
+    {
+      "id": "acoustic_guitar",
+      "title": "Акустическая гитара",
+      "description": "Cort."
+    },
+    {
+      "id": "bass_guitar",
+      "title": "Бас-гитара",
+      "description": "Fender Squier."
+    },
+    {
+      "id": "electric_guitar",
+      "title": "Электрогитара",
+      "description": "Fender Stratocaster."
+    },
+    {
+      "id": "ukulele",
+      "title": "Укулеле",
+      "description": "Маленькая милая гитара."
+    },
+    {
+      "id": "drumsticks",
+      "title": "Барабанные палочки",
+      "description": "Обычные барабанные палочки с нейлоновыми наконечниками."
+    },
+    {
+      "id": "music_monitors",
+      "title": "Мониторы",
+      "description": "Профессиональные мониторы для прослушивания и сведения музыки."
+    },
+    {
+      "id": "midi_keyboard",
+      "title": "Миди-клавиатура",
+      "description": "Простая миди-клавиатура на две октавы."
+    },
+    {
+      "id": "mixer",
+      "title": "Микшерный пульт",
+      "description": "Микшерный пульт для подключения нескольких инструментов."
+    },
+    {
+      "id": "old_jeans",
+      "title": "Джинсы",
+      "description": "Старые рваные джинсы."
+    },
+    {
+      "id": "old_sweater",
+      "title": "Свитер",
+      "description": "Старый тёплый свитер."
+    },
+    {
+      "id": "old_t_shirt",
+      "title": "Футболка",
+      "description": "Старая футболка, испачканная краской."
+    },
+    {
+      "id": "wooden_toy",
+      "title": "Игрушка",
+      "description": "Деревянная самодельная игрушка лев."
+    },
+    {
+      "id": "postcard",
+      "title": "Открытка",
+      "description": "Неподписанная открытка с изображением маяка."
+    },
+    {
+      "id": "diary",
+      "title": "Дневник",
+      "description": "Обложка дневника без страниц."
+    },
+    {
+      "id": "dream_catcher",
+      "title": "Ловец снов",
+      "description": "Самодельный ловец снов."
+    },
+    {
+      "id": "photo_2",
+      "title": "Фотография",
+      "description": "Фотография детектива Браун."
+    },
+    {
+      "id": "glass",
+      "title": "Стекло",
+      "description": "Осколки разбитоко окна."
+    },
+    {
+      "id": "hair_dryer_2",
+      "title": "Фен",
+      "description": "Фен для сушки волос."
     }
   ],
   "pages": [

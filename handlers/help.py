@@ -6,29 +6,36 @@ from utils.handler_utils import send, has_access
 def inventory(message):
   if not has_access(message.chat.id):
     return
-  
+
   progress = fileService.getJsonObjByPath('state/progress.json')
   inventoryIds = progress['inventory']
-  
+
   scene = fileService.getJsonObjByPath('consts/scene.json')
-  
-  text = "<b><i>Инвентарь:</i></b>\n"
+
+  send(message, '<b><i>Инвентарь:</i></b>\n')
+
   things = scene['things']
-  isEmpty = True
+
+  if len(inventoryIds) == 0:
+    send(message, '(Здесь пусто)')
+    return
+
+  text = ''
+
   for thing in things:
     thingId = thing['id']
     if thingId not in inventoryIds:
       continue
-    
-    isEmpty = False
-    thingText = '\t- <b>{0}</b>\n\t\t<i>{1}</i>\n\n'.format(thing['title'], thing['description'])
-    text += thingText
 
-  if isEmpty:
-    text += '(Здесь пусто)'
+    text += '\t- <b>{0}</b>\n\t\t<i>{1}</i>\n\n'.format(thing['title'], thing['description'])
 
-  send(message, text)
-  
+    if len(text) > 500:
+      send(message, text)
+      text = ''
+
+  if len(text) != 0:
+    send(message, text)
+
 @bot.message_handler(commands=['pages'])
 def pages(message):
   if not has_access(message.chat.id):
